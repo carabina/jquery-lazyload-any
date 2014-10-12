@@ -2,9 +2,9 @@
 <html>
 
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="jQuery-lazyload-any : A jQuery plugin provides a lazyload function for everything." />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="jQuery-lazyload-any : A jQuery plugin provides a lazyload function for everything.">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -39,12 +39,14 @@
 <h2>
 <a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a>Download</h2>
 
-<p><a href="https://raw.github.com/emn178/jquery-lazyload-any/master/build/jquery.lazyload-any.min.js">Compress</a><br><a href="https://raw.github.com/emn178/jquery-lazyload-any/master/src/jquery.lazyload-any.js">Uncompress</a></p>
+<p><a href="https://raw.github.com/emn178/jquery-lazyload-any/master/build/jquery.lazyload-any.min.js">Compress</a><br>
+<a href="https://raw.github.com/emn178/jquery-lazyload-any/master/src/jquery.lazyload-any.js">Uncompress</a></p>
 
 <h2>
 <a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
 
-<p><a href="http://emn178.github.io/jquery-lazyload-any/samples/images/">Images</a><br><a href="http://emn178.github.io/jquery-lazyload-any/samples/youtube/">Youtube</a></p>
+<p><a href="http://emn178.github.io/jquery-lazyload-any/samples/images/">Images</a> (<a href="http://emn178.github.io/jquery-lazyload-any/samples/overflow/">Overflow and Tabs</a>)<br>
+<a href="http://emn178.github.io/jquery-lazyload-any/samples/youtube/">Youtube</a></p>
 
 <h2>
 <a name="browser-support" class="anchor" href="#browser-support"><span class="octicon octicon-link"></span></a>Browser Support</h2>
@@ -92,9 +94,28 @@
 <p>Sets events to trigger lazyload. Default is customized event <code>appear</code>, it will trigger when element appear in screen. You could set other events including each one separated by a space, ex: <code>mousedown touchstart</code>.</p>
 
 <h3>
+<a name="methods" class="anchor" href="#methods"><span class="octicon octicon-link"></span></a>Methods</h3>
+
+<h4>
+<a name="lazyloadcheck" class="anchor" href="#lazyloadcheck"><span class="octicon octicon-link"></span></a>$.lazyload.check()</h4>
+
+<p>Force to trigger detection event.</p>
+
+<h4>
+<a name="lazyloadsetintervalinverval" class="anchor" href="#lazyloadsetintervalinverval"><span class="octicon octicon-link"></span></a>$.lazyload.setInterval(inverval)</h4>
+
+<p>Set interval of timer that check container display status.</p>
+
+<h5>
+<a name="inverval-number-default-50" class="anchor" href="#inverval-number-default-50"><span class="octicon octicon-link"></span></a><em>inverval: <code>Number</code> (default: <code>50</code>)</em>
+</h5>
+
+<p>Interval of timer. Set 0 to disable timer, and you can use <code>$.lazyload.check()</code> to trigger detection manually.</p>
+
+<h3>
 <a name="notice" class="anchor" href="#notice"><span class="octicon octicon-link"></span></a>Notice</h3>
 
-<p>You should initialize after the element add to page. Or it can't detect whether it's in screen. If you do that, you still can use <code>$(window).trigger('scroll')</code> to force detection.</p>
+<p>You should initialize after the element add to page. Or it can't detect whether it's in screen. If you do that, you still can use <code>$.lazyload.check()</code> to force detection.</p>
 
 <h2>
 <a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
